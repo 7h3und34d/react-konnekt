@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Konnekt } from '../src';
+import Konnekt from '../src';
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
