@@ -19,7 +19,9 @@ function Konnekt<OwnProps, Props>(
   hooksToProps: HooksToPropsFunction<OwnProps, Props>,
   options: KonnektOptions = defaultOptions
 ) {
-  return function(Component: React.ComponentType<OwnProps & Props>) {
+  return function(
+    Component: React.ComponentType<OwnProps & Props>
+  ): React.ComponentType<OwnProps> {
     const Konnekted = function(props: OwnProps) {
       const hooksProps = hooksToProps(props);
       return <Component {...props} {...hooksProps} />;
